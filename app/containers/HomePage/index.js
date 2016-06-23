@@ -10,12 +10,23 @@
  */
 
 import React from 'react';
+import BurberyBreadCrumb from '../../components/burberyBreadCrumb';
+import SearchPO from '../../components/SearchPO/';
+import RecentInboundDeliveries from '../../components/recentInboundDeliveries/';
+import styles from '../../styles/all.css';
+
+const handleSearch = (text) => {
+  console.log('Searched --> ', text);
+};
 
 export default class HomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
-
   render() {
     return (
-      <h1>This is the Homepage!</h1>
+      <div className={styles.mainpanel}>
+        <BurberyBreadCrumb section="Home" />
+        <SearchPO onSearch={handleSearch} />
+        <RecentInboundDeliveries />
+      </div>
     );
   }
 }

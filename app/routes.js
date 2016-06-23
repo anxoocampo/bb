@@ -33,6 +33,57 @@ export default function createRoutes() {
 
         importModules.catch(errorLoading);
       },
+    },
+    {
+      path: '/createInboundDelivery/:ponumber',
+      name: 'createInboundDelivery',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          System.import('containers/CreateInbound'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([component]) => {
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
+      },
+    },
+    {
+      path: '/createInboundDelivery/:ponumber/createPackageBox',
+      name: 'createPackageBox',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          System.import('containers/CreatePackageBox'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([component]) => {
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
+      },
+    },
+    {
+      path: '/createInboundDelivery/:ponumber/createPackageHanger',
+      name: 'createPackageHanger',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          System.import('containers/CreatePackageHanger'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([component]) => {
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
+      },
     }, {
       path: '*',
       name: 'notfound',

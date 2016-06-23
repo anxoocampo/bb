@@ -1,0 +1,29 @@
+.mainpanel {
+  background: url('./burberry-and-emma-watson1.jpg');
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bgimage {
+  position: absolute;
+  width: 100%;
+}
+
+.bbformcontrol {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #FFF;
+  background-image: none;
+  border: 2px solid #66380F;
+  border-radius: 0;
+}
+
+.miestilo {
+  color: red !important;
+}

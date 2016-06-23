@@ -12,6 +12,8 @@
  */
 
 import React from 'react';
+import styles from '../../styles/all.css';
+import bg from '../../styles/burberry-bg-dark.jpg';
 
 export default class App extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
@@ -22,6 +24,7 @@ export default class App extends React.Component { // eslint-disable-line react/
   render() {
     return (
       <div>
+        <img src={bg} className={styles.bgimage} role="presentation" />
         {this.props.children}
       </div>
     );
